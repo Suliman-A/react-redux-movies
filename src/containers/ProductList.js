@@ -26,6 +26,7 @@ function ProductList() {
 
     useEffect(() => {
         fetchProducts(searchValue);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[searchValue]);
 
     console.log("Products: " , products)
@@ -33,14 +34,12 @@ function ProductList() {
     return (
         <div className='home'>
             <div className='search-box'>
-                
                     <input 
                     value={searchValue} onChange={(e) => setSearchValue(e.target.value)} 
                     type="text" 
                     placeholder="Search.." 
                     >        
                     </input>
-        
             </div>
             <div className='products-list'>
             <ProductComponent /> 
