@@ -3,7 +3,6 @@ import{ useSelector, useDispatch} from "react-redux"
 import { setProducts } from "../containers/redux/actions/productActions"
 import ProductComponent from './ProductComponent';
 import axios from 'axios';
-import Search from './Search';
 
 function ProductList() {
     const products  = useSelector((state) => state);
